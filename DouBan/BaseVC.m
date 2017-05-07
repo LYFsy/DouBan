@@ -1,38 +1,30 @@
 //
-//  MovieVC.m
+//  BaseVC.m
 //  DouBan
 //
 //  Created by 刘一峰 on 2017/5/7.
 //  Copyright © 2017年 刘一峰. All rights reserved.
 //
 
-#import "MovieVC.h"
-#import "MovieViewModel.h"
-@interface MovieVC ()
-@property(nonatomic,strong)MovieViewModel *viewModel;
+#import "BaseVC.h"
+
+@interface BaseVC ()<UITableViewDidSelectDelegate>
 
 @end
 
-@implementation MovieVC
+@implementation BaseVC
 
 - (void)viewDidLoad {
-    _viewModel = [[MovieViewModel alloc]init];
-    self.tableView.cellType = MovieCellType;
-    [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
-        if (array) {
-            self.tableView.listArray = array;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        }
-    }];
+    [super viewDidLoad];
+    self.tableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.tableView.cellType = BaseCellType;
+    [self.view addSubview:self.tableView];
+    self.tableView.iDelegate = self;
+
 }
-
-
 - (void)didSelectedAtIndexpath:(NSIndexPath *)indexPath withBookModel:(BaseModel *)model {
-    BookModel *bModel = (BookModel*)model;
-    NSLog(@"%@",bModel.title);
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,7 +7,7 @@
 //
 
 #import "BaseTableView.h"
-
+#import "BookCellFactory.h"
 @implementation BaseTableView
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -34,9 +34,33 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    BookCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    static NSString *identifier = @"";
+    CellFactory *cellF = nil;
+    switch (_cellType) {
+        case BaseCellType:
+            identifier = @"base";
+            cellF = [[CellFactory alloc]init];
+            break;
+        case BookCellType:
+            identifier = @"book";
+            cellF = [[BookCellFactory alloc]init];
+
+            break;
+        case MusicCellType:
+            identifier = @"music";
+            cellF = [[CellFactory alloc]init];
+            break;
+        case MovieCellType:
+            identifier = @"movie";
+            cellF = [[CellFactory alloc]init];
+
+            break;
+        default:
+            break;
+    }
+    BaseCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
-        cell = [[BookCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+        cell = [cellF createCell];
     }
     cell.model = self.listArray[indexPath.row];
     return cell;

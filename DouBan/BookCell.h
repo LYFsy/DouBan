@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "BookModel.h"
-@interface BookCell : UITableViewCell
-@property(nonatomic,strong)BookModel *model;
+#import "BaseCell.h"
+@interface BookCell : BaseCell
 @property(nonatomic,strong) UIImageView *iconImgView;
 @property(nonatomic,strong) UILabel *titleLabel;
 @property(nonatomic,strong) UILabel *authorLabel;
 @property(nonatomic,strong) UILabel *pressLabel;
 @property(nonatomic,strong) UILabel *pagesLabel;
+@property(nonatomic,strong) BookModel * bookM;
 
 @end

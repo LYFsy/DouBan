@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@interface BookModel : NSObject
+#import "BaseModel.h"
+@interface BookModel : BaseModel
 @property(nonatomic,strong)NSString * title;
 @property(nonatomic,strong)NSArray * author;
 @property(nonatomic,strong)NSString * author_intro;

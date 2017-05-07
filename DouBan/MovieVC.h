@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MovieVC : UIViewController
+@interface MovieVC : BaseVC
 
 @end

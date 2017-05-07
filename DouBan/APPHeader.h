@@ -20,5 +20,8 @@
 #import "BaseTableView.h"
 #import "BookCell.h"
 #import "NetworkManager.h"
-
+#import "BaseModel.h"
+#import "BaseTableView.h"
+#import "BaseVC.h"
+#import "CellFactory.h"
 #endif /* APPHeader_h */

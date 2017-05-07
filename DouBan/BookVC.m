@@ -9,8 +9,7 @@
 #import "BookVC.h"
 #import "BaseTableView.h"
 #import "BookViewModel.h"
-@interface BookVC ()<UITableViewDidSelectDelegate>
-@property(nonatomic,strong)BaseTableView * tableView;
+@interface BookVC ()
 @property(nonatomic,strong)BookViewModel *viewModel;
 @end
 
@@ -18,10 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView = [[BaseTableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    self.tableView.iDelegate = self;
-    [self.view addSubview:self.tableView];
     _viewModel = [[BookViewModel alloc]init];
+    self.tableView.cellType = BookCellType;
     [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
         if (array) {
             self.tableView.listArray = array;
@@ -32,12 +29,10 @@
     }];
 }
 
-- (void)didSelectedAtIndexpath:(NSIndexPath *)indexPath withBookModel:(BookModel *)model {
-    NSLog(@"点击了----%@",model.title);
-}
 
-- (void)dealloc {
-    NSLog(@"释放了");
+- (void)didSelectedAtIndexpath:(NSIndexPath *)indexPath withBookModel:(BaseModel *)model {
+    BookModel *bModel = (BookModel*)model;
+    NSLog(@"%@",bModel.title);
 }
 
 - (void)didReceiveMemoryWarning {

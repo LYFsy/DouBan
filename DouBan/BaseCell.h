@@ -1,5 +1,5 @@
 //
-//  BookVC.h
+//  BaseCell.h
 //  DouBan
 //
 //  Created by 刘一峰 on 2017/5/7.
@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@interface BookVC : BaseVC
 
+@interface BaseCell : UITableViewCell
+@property(nonatomic,strong)BaseModel *model;
 @end

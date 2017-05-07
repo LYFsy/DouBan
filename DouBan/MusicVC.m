@@ -7,22 +7,31 @@
 //
 
 #import "MusicVC.h"
-
+#import "MusicViewModel.h"
 @interface MusicVC ()
-
+@property(nonatomic,strong)MusicViewModel *viewModel;
 @end
 
 @implementation MusicVC
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _viewModel = [[MusicViewModel alloc]init];
+    self.tableView.cellType = MusicCellType;
+    [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
+        if (array) {
+            self.tableView.listArray = array;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
+    }];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
+- (void)didSelectedAtIndexpath:(NSIndexPath *)indexPath withBookModel:(BaseModel *)model {
+    BookModel *bModel = (BookModel*)model;
+    NSLog(@"%@",bModel.title);
+}  // Dispose of any resources that can be recreated.
 
 /*
 #pragma mark - Navigation

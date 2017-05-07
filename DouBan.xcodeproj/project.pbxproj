@@ -25,6 +25,16 @@
 		1CE36DFF1EBF09AD002690BE /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36DFE1EBF09AD002690BE /* NetworkManager.m */; };
 		1CE36E021EBF157C002690BE /* BookViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E011EBF157C002690BE /* BookViewModel.m */; };
 		1CE36E061EBF18FC002690BE /* BookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E051EBF18FC002690BE /* BookModel.m */; };
+		1CE36E091EBF5C2B002690BE /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E081EBF5C2B002690BE /* BaseModel.m */; };
+		1CE36E0F1EBF5CC7002690BE /* BaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E0E1EBF5CC7002690BE /* BaseVC.m */; };
+		1CE36E131EBF5F24002690BE /* CellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E121EBF5F24002690BE /* CellFactory.m */; };
+		1CE36E161EBF5F77002690BE /* BaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E151EBF5F77002690BE /* BaseCell.m */; };
+		1CE36E1B1EBF5FEC002690BE /* BookCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E1A1EBF5FEC002690BE /* BookCellFactory.m */; };
+		1CE36E201EBF6B8B002690BE /* MovieCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E1F1EBF6B8B002690BE /* MovieCellFactory.m */; };
+		1CE36E231EBF6BAD002690BE /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E221EBF6BAD002690BE /* MovieCell.m */; };
+		1CE36E261EBF6C1B002690BE /* MovieViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E251EBF6C1B002690BE /* MovieViewModel.m */; };
+		1CE36E291EBF6FE5002690BE /* MusicViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E281EBF6FE5002690BE /* MusicViewModel.m */; };
+		1CE36E2C1EBF707E002690BE /* MusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE36E2B1EBF707E002690BE /* MusicModel.m */; };
 		24EF425F1E4629EE6345E93F /* libPods-DouBan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA908985F9B8F9C82F2824A7 /* libPods-DouBan.a */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +96,26 @@
 		1CE36E011EBF157C002690BE /* BookViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewModel.m; sourceTree = "<group>"; };
 		1CE36E041EBF18FC002690BE /* BookModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookModel.h; sourceTree = "<group>"; };
 		1CE36E051EBF18FC002690BE /* BookModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookModel.m; sourceTree = "<group>"; };
+		1CE36E071EBF5C2B002690BE /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		1CE36E081EBF5C2B002690BE /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		1CE36E0D1EBF5CC7002690BE /* BaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseVC.h; sourceTree = "<group>"; };
+		1CE36E0E1EBF5CC7002690BE /* BaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseVC.m; sourceTree = "<group>"; };
+		1CE36E111EBF5F24002690BE /* CellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellFactory.h; sourceTree = "<group>"; };
+		1CE36E121EBF5F24002690BE /* CellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellFactory.m; sourceTree = "<group>"; };
+		1CE36E141EBF5F77002690BE /* BaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseCell.h; sourceTree = "<group>"; };
+		1CE36E151EBF5F77002690BE /* BaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCell.m; sourceTree = "<group>"; };
+		1CE36E191EBF5FEC002690BE /* BookCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookCellFactory.h; sourceTree = "<group>"; };
+		1CE36E1A1EBF5FEC002690BE /* BookCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookCellFactory.m; sourceTree = "<group>"; };
+		1CE36E1E1EBF6B8B002690BE /* MovieCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCellFactory.h; sourceTree = "<group>"; };
+		1CE36E1F1EBF6B8B002690BE /* MovieCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCellFactory.m; sourceTree = "<group>"; };
+		1CE36E211EBF6BAD002690BE /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		1CE36E221EBF6BAD002690BE /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		1CE36E241EBF6C1B002690BE /* MovieViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieViewModel.h; sourceTree = "<group>"; };
+		1CE36E251EBF6C1B002690BE /* MovieViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieViewModel.m; sourceTree = "<group>"; };
+		1CE36E271EBF6FE5002690BE /* MusicViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicViewModel.h; sourceTree = "<group>"; };
+		1CE36E281EBF6FE5002690BE /* MusicViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicViewModel.m; sourceTree = "<group>"; };
+		1CE36E2A1EBF707E002690BE /* MusicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicModel.h; sourceTree = "<group>"; };
+		1CE36E2B1EBF707E002690BE /* MusicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicModel.m; sourceTree = "<group>"; };
 		543972BF980EE98388FA52E4 /* Pods-DouBan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouBan.release.xcconfig"; path = "Pods/Target Support Files/Pods-DouBan/Pods-DouBan.release.xcconfig"; sourceTree = "<group>"; };
 		C3C15C21AA3792152D161B13 /* Pods-DouBan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DouBan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DouBan/Pods-DouBan.debug.xcconfig"; sourceTree = "<group>"; };
 		CA908985F9B8F9C82F2824A7 /* libPods-DouBan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DouBan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,23 +244,30 @@
 		1CE36DD21EBEA733002690BE /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1CE36E101EBF5EF2002690BE /* CellFactory */,
 				1CE36DE91EBEAC65002690BE /* Movie */,
 				1CE36DE81EBEAC5B002690BE /* Music */,
 				1CE36DE71EBEAC3E002690BE /* Book */,
-				1CE36DD31EBEA73A002690BE /* BaseController */,
+				1CE36DD31EBEA73A002690BE /* Base */,
 			);
 			name = Class;
 			sourceTree = "<group>";
 		};
-		1CE36DD31EBEA73A002690BE /* BaseController */ = {
+		1CE36DD31EBEA73A002690BE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				1CE36E071EBF5C2B002690BE /* BaseModel.h */,
+				1CE36E081EBF5C2B002690BE /* BaseModel.m */,
+				1CE36DF61EBEB955002690BE /* BaseTableView.h */,
+				1CE36DF71EBEB955002690BE /* BaseTableView.m */,
 				1CE36DD41EBEA7A0002690BE /* MainTabbarVC.h */,
 				1CE36DD51EBEA7A0002690BE /* MainTabbarVC.m */,
 				1CE36DD71EBEA95B002690BE /* MainNavigationVC.h */,
 				1CE36DD81EBEA95B002690BE /* MainNavigationVC.m */,
+				1CE36E0D1EBF5CC7002690BE /* BaseVC.h */,
+				1CE36E0E1EBF5CC7002690BE /* BaseVC.m */,
 			);
-			name = BaseController;
+			name = Base;
 			sourceTree = "<group>";
 		};
 		1CE36DE71EBEAC3E002690BE /* Book */ = {
@@ -249,6 +286,10 @@
 			children = (
 				1CE36DED1EBEAC87002690BE /* MusicVC.h */,
 				1CE36DEE1EBEAC87002690BE /* MusicVC.m */,
+				1CE36E271EBF6FE5002690BE /* MusicViewModel.h */,
+				1CE36E281EBF6FE5002690BE /* MusicViewModel.m */,
+				1CE36E2A1EBF707E002690BE /* MusicModel.h */,
+				1CE36E2B1EBF707E002690BE /* MusicModel.m */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -258,6 +299,8 @@
 			children = (
 				1CE36DF01EBEAC94002690BE /* MovieVC.h */,
 				1CE36DF11EBEAC94002690BE /* MovieVC.m */,
+				1CE36E241EBF6C1B002690BE /* MovieViewModel.h */,
+				1CE36E251EBF6C1B002690BE /* MovieViewModel.m */,
 			);
 			name = Movie;
 			sourceTree = "<group>";
@@ -274,10 +317,6 @@
 		1CE36DF41EBEB7F5002690BE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1CE36DF61EBEB955002690BE /* BaseTableView.h */,
-				1CE36DF71EBEB955002690BE /* BaseTableView.m */,
-				1CE36DF91EBEBD1A002690BE /* BookCell.h */,
-				1CE36DFA1EBEBD1A002690BE /* BookCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -307,6 +346,49 @@
 				1CE36E011EBF157C002690BE /* BookViewModel.m */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		1CE36E101EBF5EF2002690BE /* CellFactory */ = {
+			isa = PBXGroup;
+			children = (
+				1CE36E1D1EBF6B66002690BE /* MovieCell */,
+				1CE36E181EBF5FC2002690BE /* BookCell */,
+				1CE36E171EBF5FB3002690BE /* BaseCell */,
+			);
+			name = CellFactory;
+			sourceTree = "<group>";
+		};
+		1CE36E171EBF5FB3002690BE /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CE36E111EBF5F24002690BE /* CellFactory.h */,
+				1CE36E121EBF5F24002690BE /* CellFactory.m */,
+				1CE36E141EBF5F77002690BE /* BaseCell.h */,
+				1CE36E151EBF5F77002690BE /* BaseCell.m */,
+			);
+			name = BaseCell;
+			sourceTree = "<group>";
+		};
+		1CE36E181EBF5FC2002690BE /* BookCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CE36DF91EBEBD1A002690BE /* BookCell.h */,
+				1CE36DFA1EBEBD1A002690BE /* BookCell.m */,
+				1CE36E191EBF5FEC002690BE /* BookCellFactory.h */,
+				1CE36E1A1EBF5FEC002690BE /* BookCellFactory.m */,
+			);
+			name = BookCell;
+			sourceTree = "<group>";
+		};
+		1CE36E1D1EBF6B66002690BE /* MovieCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CE36E211EBF6BAD002690BE /* MovieCell.h */,
+				1CE36E221EBF6BAD002690BE /* MovieCell.m */,
+				1CE36E1E1EBF6B8B002690BE /* MovieCellFactory.h */,
+				1CE36E1F1EBF6B8B002690BE /* MovieCellFactory.m */,
+			);
+			name = MovieCell;
 			sourceTree = "<group>";
 		};
 		B3C2E1182C82EF5D394B6FA1 /* Pods */ = {
@@ -511,16 +593,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE36E161EBF5F77002690BE /* BaseCell.m in Sources */,
 				1CE36DF81EBEB955002690BE /* BaseTableView.m in Sources */,
 				1CE36DEF1EBEAC87002690BE /* MusicVC.m in Sources */,
+				1CE36E131EBF5F24002690BE /* CellFactory.m in Sources */,
 				1CE36E061EBF18FC002690BE /* BookModel.m in Sources */,
+				1CE36E201EBF6B8B002690BE /* MovieCellFactory.m in Sources */,
+				1CE36E231EBF6BAD002690BE /* MovieCell.m in Sources */,
 				1CE36D9C1EBEA0C8002690BE /* AppDelegate.m in Sources */,
 				1CE36D991EBEA0C8002690BE /* main.m in Sources */,
 				1CE36E021EBF157C002690BE /* BookViewModel.m in Sources */,
 				1CE36DFB1EBEBD1A002690BE /* BookCell.m in Sources */,
+				1CE36E0F1EBF5CC7002690BE /* BaseVC.m in Sources */,
+				1CE36E091EBF5C2B002690BE /* BaseModel.m in Sources */,
+				1CE36E1B1EBF5FEC002690BE /* BookCellFactory.m in Sources */,
 				1CE36DD61EBEA7A0002690BE /* MainTabbarVC.m in Sources */,
+				1CE36E261EBF6C1B002690BE /* MovieViewModel.m in Sources */,
 				1CE36DEC1EBEAC7B002690BE /* BookVC.m in Sources */,
 				1CE36DD91EBEA95B002690BE /* MainNavigationVC.m in Sources */,
+				1CE36E291EBF6FE5002690BE /* MusicViewModel.m in Sources */,
+				1CE36E2C1EBF707E002690BE /* MusicModel.m in Sources */,
 				1CE36DFF1EBF09AD002690BE /* NetworkManager.m in Sources */,
 				1CE36DF21EBEAC94002690BE /* MovieVC.m in Sources */,
 			);

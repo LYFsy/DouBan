@@ -13,11 +13,11 @@
 //图书详情
 #define book_search_id @"https://api.douban.com/v2/book/"
 //音乐搜索
-#define music_search @"https://api.douban.com/v2/music/search"
+#define music_search @"https://api.douban.com/v2/music/search?count=10&q=love"
 //音乐详情
 #define music_search_id @"https://api.douban.com/v2/music/"
 //电影搜索
-#define movie_search @"https://api.douban.com/v2/movie/search"
+#define movie_search @"https://api.douban.com/v2/movie/search?count=10&q=nba"
 //电影详情
 #define movie_search_id @"https://api.douban.com/v2/movie/subject/"
 
