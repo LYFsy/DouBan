@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainNavigationVC.h
 //  DouBan
 //
 //  Created by 刘一峰 on 2017/5/7.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MainNavigationVC : UINavigationController
 
 @end
-
