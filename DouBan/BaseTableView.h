@@ -28,4 +28,5 @@ typedef NS_ENUM(NSInteger,CurrentCellType) {
 @property(nonatomic,strong)NSArray *listArray;
 @property(nonatomic,assign)CurrentCellType cellType;
 @property(nonatomic,weak)id<UITableViewDidSelectDelegate>iDelegate;
+@property(nonatomic,assign)CGFloat currentCellHeight;
 @end

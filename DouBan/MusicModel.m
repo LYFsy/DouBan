@@ -18,7 +18,7 @@
 
 - (void)setAttrs:(NSDictionary *)attrs {
     if (attrs) {
-        self.pubdate = [attrs valueForKey:@"pubdate"];
+        self.pubdate = [attrs valueForKey:@"pubdate"][0];
     }
 }
 

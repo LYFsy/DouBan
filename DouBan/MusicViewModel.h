@@ -11,5 +11,5 @@
 @interface MusicViewModel : NSObject
 @property(nonatomic,strong)NSMutableArray *musicList;
 
-- (void)requestBookListDataWithCompletionBlock:(void(^)(NSArray *array,NSError * error)) completion;
+- (void)requestMusicListDataWithCompletionBlock:(void(^)(NSArray *array,NSError * error)) completion;
 @end

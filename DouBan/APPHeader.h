@@ -13,9 +13,9 @@
 
 #define SCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
 
-#define BASE_CELL_HEIGHT (([[UIScreen mainScreen]bounds].size.height - 108) / 4.5)
+#define BOOK_CELL_HEIGHT (([[UIScreen mainScreen]bounds].size.height - 108) / 4.5)
 
-
+#define MUSIC_CELL_HEIGHT (([[UIScreen mainScreen]bounds].size.height - 108) / 3.3)
 
 #import "BaseTableView.h"
 #import "BookCell.h"

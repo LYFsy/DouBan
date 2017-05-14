@@ -9,14 +9,14 @@
 #import "MusicViewModel.h"
 #import "MusicModel.h"
 @implementation MusicViewModel
-- (NSMutableArray *)bookList {
+- (NSMutableArray *)musicList {
     if (_musicList == nil) {
         _musicList = [NSMutableArray array];
     }
     return _musicList;
 }
 
-- (void)requestBookListDataWithCompletionBlock:(void(^)(NSArray *array,NSError * error)) completion {
+- (void)requestMusicListDataWithCompletionBlock:(void(^)(NSArray *array,NSError * error)) completion {
     [[NetworkManager getInstance]getWithUrl:music_search success:^(NSData *data, NSError *error) {
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         NSArray *array = [dict valueForKey:@"musics"];
@@ -24,11 +24,11 @@
             MusicModel *model = [MusicModel yy_modelWithDictionary:obj];
             model.authorStr = @"";
             [model.author enumerateObjectsUsingBlock:^(NSString *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                model.authorStr = [model.authorStr stringByAppendingString:obj];
+                model.authorStr = [model.authorStr stringByAppendingString:[obj valueForKey:@"name"]];
             }];
             [self.musicList addObject:model];
         }];
-        completion(self.bookList,nil);
+        completion(self.musicList,nil);
     } failure:^(NSData *data, NSError *error) {
         NSLog(@"%@",error);
         completion(nil,error);

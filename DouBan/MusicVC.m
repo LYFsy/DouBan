@@ -15,9 +15,11 @@
 @implementation MusicVC
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
     _viewModel = [[MusicViewModel alloc]init];
     self.tableView.cellType = MusicCellType;
-    [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
+    self.tableView.currentCellHeight = MUSIC_CELL_HEIGHT;
+    [_viewModel requestMusicListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
         if (array) {
             self.tableView.listArray = array;
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -32,6 +34,7 @@
     BookModel *bModel = (BookModel*)model;
     NSLog(@"%@",bModel.title);
 }  // Dispose of any resources that can be recreated.
+
 
 /*
 #pragma mark - Navigation

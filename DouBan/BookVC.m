@@ -15,10 +15,13 @@
 
 @implementation BookVC
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _viewModel = [[BookViewModel alloc]init];
     self.tableView.cellType = BookCellType;
+    self.tableView.currentCellHeight = BOOK_CELL_HEIGHT;
     [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
         if (array) {
             self.tableView.listArray = array;

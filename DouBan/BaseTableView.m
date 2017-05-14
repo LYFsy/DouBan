@@ -8,6 +8,7 @@
 
 #import "BaseTableView.h"
 #import "BookCellFactory.h"
+#import "MusicCellFactory.h"
 @implementation BaseTableView
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -26,7 +27,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return BASE_CELL_HEIGHT;
+    return self.currentCellHeight;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.listArray.count;
@@ -48,7 +49,7 @@
             break;
         case MusicCellType:
             identifier = @"music";
-            cellF = [[CellFactory alloc]init];
+            cellF = [[MusicCellFactory alloc]init];
             break;
         case MovieCellType:
             identifier = @"movie";
