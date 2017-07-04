@@ -13,7 +13,7 @@
 //图书详情
 #define book_search_id @"https://api.douban.com/v2/book/"
 //音乐搜索
-#define music_search @"https://api.douban.com/v2/music/search?count=10&q=love"
+#define music_search @"https://api.douban.com/v2/music/search?count=10&q=经典"
 //音乐详情
 #define music_search_id @"https://api.douban.com/v2/music/"
 //电影搜索

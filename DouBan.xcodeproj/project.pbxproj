@@ -801,6 +801,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = /Users/lyf/iOS/OC/DouBan/DouBan/PrefixHeader.pch;
 				INFOPLIST_FILE = DouBan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyf.DouBan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -815,6 +816,7 @@
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREFIX_HEADER = /Users/lyf/iOS/OC/DouBan/DouBan/PrefixHeader.pch;
 				INFOPLIST_FILE = DouBan/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyf.DouBan;
 				PRODUCT_NAME = "$(TARGET_NAME)";

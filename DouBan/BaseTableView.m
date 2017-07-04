@@ -9,6 +9,7 @@
 #import "BaseTableView.h"
 #import "BookCellFactory.h"
 #import "MusicCellFactory.h"
+
 @implementation BaseTableView
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -38,14 +39,9 @@
     static NSString *identifier = @"";
     CellFactory *cellF = nil;
     switch (_cellType) {
-        case BaseCellType:
-            identifier = @"base";
-            cellF = [[CellFactory alloc]init];
-            break;
         case BookCellType:
             identifier = @"book";
             cellF = [[BookCellFactory alloc]init];
-
             break;
         case MusicCellType:
             identifier = @"music";
@@ -54,7 +50,6 @@
         case MovieCellType:
             identifier = @"movie";
             cellF = [[CellFactory alloc]init];
-
             break;
         default:
             break;
@@ -72,6 +67,7 @@
     if (self.iDelegate && [self.iDelegate respondsToSelector:@selector(didSelectedAtIndexpath:withBookModel:)]) {
         [self.iDelegate didSelectedAtIndexpath:indexPath withBookModel:self.listArray[indexPath.row]];
     }
+    //[self.subject sendNext:indexPath];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BookViewModel.h"
+#import "ReactiveObjC.h"
 
 typedef NS_ENUM(NSInteger,CurrentCellType) {
     BaseCellType = 0,
@@ -29,4 +30,7 @@ typedef NS_ENUM(NSInteger,CurrentCellType) {
 @property(nonatomic,assign)CurrentCellType cellType;
 @property(nonatomic,weak)id<UITableViewDidSelectDelegate>iDelegate;
 @property(nonatomic,assign)CGFloat currentCellHeight;
+//替换代理
+@property(nonatomic,strong)RACSubject *subject;
+
 @end

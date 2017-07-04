@@ -15,17 +15,31 @@
 
 @implementation MovieVC
 
+- (MovieViewModel *)viewModel {
+    if (!_viewModel) {
+        _viewModel = [MovieViewModel new];
+    }
+    return _viewModel;
+}
+
 - (void)viewDidLoad {
-    _viewModel = [[MovieViewModel alloc]init];
-    self.tableView.cellType = MovieCellType;
-    [_viewModel requestBookListDataWithCompletionBlock:^(NSArray *array, NSError *error) {
-        if (array) {
-            self.tableView.listArray = array;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.tableView reloadData];
-            });
-        }
-    }];
+    [super viewDidLoad];
+    self.tableView.cellType = BookCellType;
+    self.tableView.currentCellHeight = BOOK_CELL_HEIGHT;
+    @weakify(self);
+    [[self.viewModel.loadMovieDataCommand execute:nil] subscribeNext:^(id responseObjec){
+        @strongify(self);
+        self.tableView.listArray = responseObjec;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+        }];
+    //替换代理
+//    RACSubject *subject = [RACSubject subject];
+//    [subject subscribeNext:^(id  _Nullable x) {
+//        NSLog(@"%@",x);
+//    }];
+//    self.tableView.subject = subject;
 }
 
 

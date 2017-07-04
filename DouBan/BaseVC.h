@@ -10,5 +10,4 @@
 
 @interface BaseVC : UIViewController
 @property(nonatomic,strong)BaseTableView * tableView;
-- (void)didSelectedAtIndexpath:(NSIndexPath *)indexPath withBookModel:(BaseModel *)model;
 @end

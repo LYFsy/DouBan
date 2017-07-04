@@ -10,6 +10,7 @@
 
 @implementation CellFactory
 - (BaseCell *)createCell {
-    return [[BaseCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"base"];
+    NSAssert(0, @"subclass must overide");
+    return nil;
 }
 @end
