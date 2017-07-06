@@ -22,14 +22,17 @@
 }
 
 - (void)addIconImageView {
-    _iconImgView = [[UIImageView alloc]init];
-    [self.contentView addSubview:_iconImgView];
-    [_iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.mas_left).offset(10);
-        make.top.equalTo(self.mas_top).offset(10);
-        make.bottom.equalTo(self.mas_bottom).offset(-10);
-        make.width.equalTo(_iconImgView.mas_height);
-    }];
+    if(!_iconImgView) {
+        _iconImgView = [[UIImageView alloc]init];
+        [self.contentView addSubview:_iconImgView];
+        [_iconImgView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.mas_left).offset(10);
+            make.top.equalTo(self.mas_top).offset(10);
+            make.bottom.equalTo(self.mas_bottom).offset(-10);
+            make.width.equalTo(_iconImgView.mas_height);
+        }];
+    }
+
     //TODO 这个地方随后还用做图片三级缓存处理。
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.bookM.image]];
@@ -41,57 +44,70 @@
 }
 
 - (void)addTitleLabel {
-    _titleLabel = [[UILabel alloc]init];
-    [self.contentView addSubview:_titleLabel];
-    _titleLabel.numberOfLines = 1;
-    _titleLabel.textColor = [UIColor blackColor];
+    if (!_titleLabel) {
+        _titleLabel = [[UILabel alloc]init];
+        [self.contentView addSubview:_titleLabel];
+        _titleLabel.numberOfLines = 1;
+        _titleLabel.textColor = [UIColor blackColor];
+        [_titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.iconImgView.mas_right).offset(5);
+            make.top.equalTo(self.iconImgView.mas_top);
+            make.height.equalTo(self.iconImgView.mas_height).dividedBy(4);
+        }];
+    }
+
     _titleLabel.text = self.bookM.title;
-    [_titleLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.iconImgView.mas_right).offset(5);
-        make.top.equalTo(self.iconImgView.mas_top);
-        make.height.equalTo(self.iconImgView.mas_height).dividedBy(4);
-    }];
+
 }
 
 - (void)addAuthorLabel {
-    _authorLabel = [[UILabel alloc]init];
-    [self.contentView addSubview:_authorLabel];
-    _authorLabel.numberOfLines = 1;
-    _authorLabel.textColor = [UIColor grayColor];
-    _authorLabel.text = @"";
+    if (!_authorLabel) {
+        _authorLabel = [[UILabel alloc]init];
+        [self.contentView addSubview:_authorLabel];
+        _authorLabel.numberOfLines = 1;
+        _authorLabel.textColor = [UIColor grayColor];
+        _authorLabel.text = @"";
+        [_authorLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.titleLabel.mas_left);
+            make.top.equalTo(self.titleLabel.mas_bottom);
+            make.height.equalTo(self.titleLabel.mas_height);
+        }];
+    }
     _authorLabel.text = self.bookM.authorStr;
-    [_authorLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.titleLabel.mas_left);
-        make.top.equalTo(self.titleLabel.mas_bottom);
-        make.height.equalTo(self.titleLabel.mas_height);
-    }];
+
 }
 
 - (void)addPressLabel {
-    _pressLabel = [[UILabel alloc]init];
-    [self.contentView addSubview:_pressLabel];
-    _pressLabel.numberOfLines = 1;
-    _pressLabel.textColor = [UIColor grayColor];
+    if (!_pressLabel) {
+        _pressLabel = [[UILabel alloc]init];
+        [self.contentView addSubview:_pressLabel];
+        _pressLabel.numberOfLines = 1;
+        _pressLabel.textColor = [UIColor grayColor];
+        [_pressLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.authorLabel.mas_left);
+            make.top.equalTo(self.authorLabel.mas_bottom);
+            make.height.equalTo(self.authorLabel.mas_height);
+        }];
+    }
     _pressLabel.text = self.bookM.publisher;
-    [_pressLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.authorLabel.mas_left);
-        make.top.equalTo(self.authorLabel.mas_bottom);
-        make.height.equalTo(self.authorLabel.mas_height);
-    }];
+
 }
 
 
 - (void)addPagesLabel {
-    _pagesLabel = [[UILabel alloc]init];
-    [self.contentView addSubview:_pagesLabel];
-    _pagesLabel.numberOfLines = 1;
-    _pagesLabel.textColor = [UIColor grayColor];
+    if (!_pagesLabel) {
+        _pagesLabel = [[UILabel alloc]init];
+        [self.contentView addSubview:_pagesLabel];
+        _pagesLabel.numberOfLines = 1;
+        _pagesLabel.textColor = [UIColor grayColor];
+        [_pagesLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self.pressLabel.mas_left);
+            make.top.equalTo(self.pressLabel.mas_bottom);
+            make.height.equalTo(self.pressLabel.mas_height);
+        }];
+    }
     _pagesLabel.text = self.bookM.pages;
-    [_pagesLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.pressLabel.mas_left);
-        make.top.equalTo(self.pressLabel.mas_bottom);
-        make.height.equalTo(self.pressLabel.mas_height);
-    }];
+
 }
 - (void)awakeFromNib {
     [super awakeFromNib];

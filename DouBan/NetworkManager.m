@@ -43,7 +43,6 @@ static NetworkManager * manager = nil;
 - (void)getWithUrl:(NSString *)urlStr success:(DataCompletionBlock)success failure:(DataCompletionBlock)failure{
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
-        NSLog(@"%@",url);
         NSURLSession *session = [NSURLSession sharedSession];
         NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
             if (error) {
@@ -55,8 +54,6 @@ static NetworkManager * manager = nil;
         [task resume];
     }];
     [self.networkQueue addOperation:operation];
-    
-
 }
 
 
